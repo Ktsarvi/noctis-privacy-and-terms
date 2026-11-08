@@ -3,14 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Noctis Tales — Privacy Policy & Terms of Service</title>
+    <title>Noctis AI — Privacy Policy & Terms of Service</title>
     <style>
       :root {
         --bg: #faf5ff;
+        --surface: #ffffff;
         --text: #1e1b4b;
         --text-muted: #4b5563;
         --accent: #4338ca;
+        --accent-hover: #3730a3;
         --border: #e9d5ff;
+        --flag-bg: #fffbeb;
+        --flag-border: #f59e0b;
+        --flag-text: #92400e;
+        --card-bg: #f5f3ff;
       }
       * {
         box-sizing: border-box;
@@ -23,30 +29,32 @@
         font-family:
           -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
           Arial, sans-serif;
-        line-height: 1.6;
+        line-height: 1.65;
       }
       .container {
-        max-width: 720px;
+        max-width: 760px;
         margin: 0 auto;
         padding: 48px 24px 80px;
       }
       header {
-        margin-bottom: 32px;
+        margin-bottom: 28px;
       }
       h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
         font-weight: 800;
         margin: 0 0 8px;
         letter-spacing: -0.02em;
+        color: var(--text);
       }
       .subtitle {
         color: var(--text-muted);
-        font-size: 0.95rem;
+        font-size: 1.05rem;
         margin: 0;
       }
       nav.toc {
         display: flex;
-        gap: 12px;
+        flex-wrap: wrap;
+        gap: 16px;
         margin: 24px 0 40px;
         border-bottom: 1px solid var(--border);
         padding-bottom: 16px;
@@ -59,30 +67,41 @@
       }
       nav.toc a:hover {
         text-decoration: underline;
+        color: var(--accent-hover);
       }
       section {
-        margin-bottom: 48px;
+        margin-bottom: 56px;
       }
       section h2 {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
         font-weight: 800;
         margin: 0 0 20px;
-        padding-top: 8px;
+        padding-top: 12px;
         scroll-margin-top: 24px;
+        border-bottom: 2px solid var(--border);
+        padding-bottom: 8px;
       }
       h3 {
-        font-size: 1.05rem;
+        font-size: 1.15rem;
         font-weight: 700;
-        margin: 0 0 8px;
+        margin: 24px 0 8px;
+        color: var(--text);
+      }
+      h4 {
+        font-size: 1rem;
+        font-weight: 700;
+        margin: 16px 0 6px;
+        color: var(--text);
       }
       p {
         color: var(--text-muted);
         margin: 0 0 14px;
         font-size: 0.98rem;
       }
-      ul {
-        margin: 0 0 14px;
-        padding-left: 20px;
+      ul,
+      ol {
+        margin: 0 0 16px;
+        padding-left: 24px;
         color: var(--text-muted);
       }
       li {
@@ -93,65 +112,129 @@
         color: var(--text);
       }
       .meta {
-        font-size: 0.9rem;
+        font-size: 0.92rem;
         color: var(--text-muted);
         margin: 0 0 6px;
+      }
+      .card {
+        background: var(--card-bg);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 16px 20px;
+        margin: 16px 0 20px;
+      }
+      .flag {
+        background: var(--flag-bg);
+        border-left: 4px solid var(--flag-border);
+        color: var(--flag-text);
+        padding: 12px 16px;
+        margin: 14px 0;
+        border-radius: 0 6px 6px 0;
+        font-size: 0.92rem;
+      }
+      .flag strong {
+        color: var(--flag-text);
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 16px 0 24px;
+        font-size: 0.92rem;
+      }
+      th,
+      td {
+        border: 1px solid var(--border);
+        padding: 10px 12px;
+        text-align: left;
+      }
+      th {
+        background: var(--card-bg);
+        color: var(--text);
+        font-weight: 700;
+      }
+      td {
+        color: var(--text-muted);
       }
       footer {
         text-align: center;
         color: #9ca3af;
-        font-size: 0.8rem;
-        margin-top: 40px;
+        font-size: 0.85rem;
+        margin-top: 48px;
         border-top: 1px solid var(--border);
         padding-top: 24px;
       }
       a {
         color: var(--accent);
       }
+      a:hover {
+        text-decoration: underline;
+      }
+      code {
+        background: #ede9fe;
+        color: var(--text);
+        padding: 2px 5px;
+        border-radius: 4px;
+        font-size: 0.9em;
+      }
     </style>
   </head>
   <body>
     <div class="container">
       <header>
-        <h1>Noctis Tales</h1>
-        <p class="subtitle">Privacy Policy &amp; Terms of Service</p>
+        <h1>Noctis AI</h1>
+        <p class="subtitle">
+          Plain-Language Privacy Policy &amp; Terms of Service
+        </p>
       </header>
 
       <nav class="toc">
-        <a href="#consent">Consent & Agreement</a>
+        <a href="#consent">Consent &amp; Summary</a>
         <a href="#privacy">Privacy Policy</a>
         <a href="#terms">Terms of Service</a>
+        <a href="#cancellation">Subscription &amp; Cancellation</a>
       </nav>
 
-      <!-- ============ CONSENT & AGREEMENT ============ -->
+      <!-- ============ CONSENT & SUMMARY ============ -->
       <section id="consent">
-        <h2>Consent & Agreement</h2>
+        <h2>Consent &amp; Agreement</h2>
 
-        <p class="meta"><strong>App name:</strong> Noctis Tales</p>
-        <p class="meta"><strong>Developer:</strong> Noctis AI</p>
-        <p class="meta"><strong>Effective date:</strong> October 19, 2026</p>
+        <p class="meta">
+          <strong>Application:</strong> Noctis AI (also referred to as Noctis /
+          Noctis Tales)
+        </p>
+        <p class="meta"><strong>Effective Date:</strong> November 8, 2026</p>
 
-        <h3>Account Creation & Consent</h3>
+        <div class="card">
+          <p style="margin: 0">
+            <strong>Quick Summary:</strong> Noctis AI creates personalized
+            bedtime stories for children using artificial intelligence. We
+            require all account holders to be adults (18+), we do not sell your
+            personal data, we never see or store your payment details, and you
+            can delete your account and all associated data with one tap from
+            the in-app Settings screen.
+          </p>
+        </div>
+
+        <h3>Adult Requirement &amp; Parental Consent</h3>
         <p>
-          <strong
-            >By creating an account with Noctis Tales, you explicitly agree to
-            abide by these Terms of Service and Privacy Policy.</strong
-          >
-          Account creation constitutes your acceptance of all terms, conditions,
-          and data practices described herein.
+          <strong>Adults Only:</strong> You must be at least 18 years old (or
+          the legal age of majority in your jurisdiction) to register an
+          account. Noctis AI is operated for parents, guardians, and adult
+          caregivers.
         </p>
         <p>
-          <strong>Adult Verification:</strong> By creating an account, you
-          represent and verify that you are at least 18 years of age. Noctis
-          Tales requires adult account holders to ensure proper consent for any
-          child data collection and usage.
+          <strong>Parental Consent for Child Profiles:</strong> When you enter a
+          child's name, age, preferred language, or story preferences into the
+          app, you confirm that you are the child's parent or legal guardian,
+          and you explicitly consent to our collection, processing, and storage
+          of that information solely to create personalized stories as outlined
+          in our Privacy Policy.
         </p>
         <p>
-          <strong>Parental Consent:</strong> If you provide information about a
-          child (such as name, age, gender, or appearance) for story
-          personalization, you confirm that you are the parent or legal guardian
-          of that child and provide explicit consent for the collection and use
-          of such information as described in this Privacy Policy.
+          <strong>Explicit Agreement:</strong> When you complete the onboarding
+          flow, you are asked to review and confirm your acceptance of our Terms
+          of Service and Privacy Policy. This confirmation is recorded in your
+          profile.
         </p>
       </section>
 
@@ -159,246 +242,415 @@
       <section id="privacy">
         <h2>Privacy Policy</h2>
 
-        <p class="meta"><strong>App name:</strong> Noctis Tales</p>
-        <p class="meta"><strong>Developer:</strong> Noctis AI</p>
-        <p class="meta"><strong>Effective date:</strong> October 19, 2026</p>
-
-        <h3>Information We Collect</h3>
-        <p>
-          <strong>Account Information:</strong> When you create an account, we
-          collect your email address, name (if provided during sign-up), and
-          account credentials (passwords are securely hashed and never stored in
-          plaintext).
-        </p>
-        <p>
-          <strong>Child Information:</strong> When you create stories, you may
-          provide child's name, age, gender, appearance, and additional details
-          for story personalization.
-        </p>
-        <p>
-          <strong>Story Content:</strong> The stories you generate are stored in
-          your personal library within our secure database. This allows you to
-          access, read, and manage your stories across devices.
-        </p>
-        <p>
-          <strong>Authentication Data:</strong> When you sign in with Apple, we
-          receive authentication tokens and basic profile information (email and
-          name, if provided) from Apple.
-        </p>
-        <p>
-          <strong>Quota Data:</strong> We track your story generation quota to
-          enforce plan limits (free vs. Ultra plan).
+        <p class="meta"><strong>Effective Date:</strong> November 8, 2026</p>
+        <p class="meta">
+          <strong>Contact:</strong>
+          <a href="mailto:privacy@noctis.ai">privacy@noctis.ai</a>
         </p>
 
-        <h3>How We Use Information</h3>
+        <h3>1. Introduction</h3>
         <p>
-          <strong>Providing App Functionality:</strong> We use your information
-          to provide, maintain, and improve our story generation services.
-        </p>
-        <p>
-          <strong>Account Management:</strong> Your account information is used
-          to manage your account, authenticate your access, and provide
-          personalized experiences.
-        </p>
-        <p>
-          <strong>Story Generation:</strong> Child information is used to
-          generate personalized stories via Google's Gemini API.
-        </p>
-        <p>
-          <strong>Customer Support:</strong> We may use your information to
-          respond to your inquiries and provide customer support.
-        </p>
-        <p>
-          <strong>Security:</strong> We use your information to detect, prevent,
-          and address technical issues and security threats.
+          At Noctis AI, we believe family privacy is paramount. This Privacy
+          Policy clearly describes what data we collect, why we collect it, how
+          third-party services assist us in delivering the app, and how you
+          retain total control over your and your family's information.
         </p>
 
-        <h3>Data Sharing</h3>
+        <h3>2. Information We Collect</h3>
         <p>
-          We share data with the following third-party services to operate our
+          We only collect data that is strictly necessary to authenticate you,
+          create your personalized stories, and manage your subscription.
+        </p>
+
+        <h4>A. Account &amp; Authentication Data</h4>
+        <ul>
+          <li>
+            <strong>Email Address &amp; One-Time Password (OTP):</strong> When
+            you sign in with your email, we send a 6-digit OTP code to verify
+            your identity. We do not use or store permanent account passwords.
+            The OTP code is verified by Supabase Auth and discarded immediately.
+          </li>
+          <li>
+            <strong>Sign in with Apple:</strong> If you choose Apple
+            authentication, we receive an Apple user identifier, an identity
+            token, and (only during your very first sign-in) the email address
+            and full name you authorize Apple to share.
+          </li>
+          <li>
+            <strong>Sign in with Google:</strong> If you choose Google
+            authentication, we receive Google OAuth identity and access tokens
+            to authenticate your account.
+          </li>
+          <li>
+            <strong>Authentication Tokens:</strong> Secure session tokens
+            (access and refresh tokens) are stored locally on your device in
+            secure storage (AsyncStorage / SecureStore) to keep you signed in.
+          </li>
+        </ul>
+
+        <h4>B. Child &amp; Story Preference Data</h4>
+        <p>To generate customized stories for your child, you provide:</p>
+        <ul>
+          <li>
+            <strong>Child's Name:</strong> Stored in your profile and used in
+            story text and illustrations.
+          </li>
+          <li>
+            <strong>Child's Age:</strong> (Ages 1 to 12) Used to adjust reading
+            complexity and vocabulary.
+          </li>
+          <li>
+            <strong>Preferred Language:</strong> Stored in your profile to
+            generate stories and narration in your selected language.
+          </li>
+          <li>
+            <strong>Story Preferences:</strong> Themes, morals or lessons, and
+            story settings you select during story creation.
+          </li>
+          <li>
+            <strong>Favorites:</strong> Stories you flag as favorites in your
+            library.
+          </li>
+        </ul>
+
+        <h4>C. Generated Story Content &amp; Media Storage</h4>
+        <ul>
+          <li>
+            <strong>Story Text &amp; Titles:</strong> Generated stories and
+            their titles are stored in our secure database linked to your user
+            account so you can read them at any time.
+          </li>
+          <li>
+            <strong>Illustration Images:</strong> Cover images generated for
+            your stories are stored in our secure cloud storage bucket
+            (<code>story-images</code>).
+          </li>
+          <li>
+            <strong>Narration Audio (TTS):</strong> Text-to-speech narration
+            files are stored in our secure cloud storage bucket
+            (<code>story-audio</code>) so you can listen to them on demand.
+          </li>
+          <li>
+            <strong>Generation Logs:</strong> We record timestamps and
+            generation types (story, image, speech) to enforce daily and
+            plan-specific limits.
+          </li>
+        </ul>
+
+        <h4>D. Subscription &amp; Payment Data</h4>
+        <p>
+          All financial transactions are handled exclusively by the
+          <strong>Apple App Store</strong> or
+          <strong>Google Play Store</strong>. Noctis AI never collects,
+          receives, or stores your credit card numbers, bank details, or billing
+          addresses. We receive only transaction metadata via RevenueCat (such
+          as whether your subscription is active, plan type, expiration date,
+          and store receipt identifiers).
+        </p>
+
+        <h4>E. Technical &amp; Device Information Collected by SDKs</h4>
+        <p>
+          When you use the app, the RevenueCat SDK automatically collects
+          limited device data to validate purchases and deliver updates:
+        </p>
+        <ul>
+          <li>
+            Device model, operating system (iOS/Android), OS version, app
+            version, and device locale/language.
+          </li>
+          <li>
+            IP address (used to determine store region/currency and prevent
+            fraudulent activity).
+          </li>
+          <li>
+            Advertising Identifiers (IDFA on iOS or GAID on Android): Only
+            collected if you explicitly grant permission via your device
+            settings. We do not run advertisements.
+          </li>
+        </ul>
+
+        <div class="flag">
+          <strong>[FLAG for Developer Review]:</strong> If you do not intend to
+          track advertising campaigns, ensure that you disable IDFA collection
+          in your RevenueCat SDK configuration to avoid requiring Apple's App
+          Tracking Transparency (ATT) prompt.
+        </div>
+
+        <h3>3. How We Use Your Information</h3>
+        <p>We use your information strictly for the following purposes:</p>
+        <ul>
+          <li>
+            <strong>Providing the Core Service:</strong> Generating personalized
+            story text, illustrations, and audio narrations tailored to your
+            child's age and language.
+          </li>
+          <li>
+            <strong>Personal Library:</strong> Preserving your created stories,
+            illustrations, and audio so you can revisit them across your
+            devices.
+          </li>
+          <li>
+            <strong>Quota &amp; Subscription Enforcement:</strong> Tracking
+            daily story generations against your subscription tier limits (e.g.,
+            Free vs. Ultra).
+          </li>
+          <li>
+            <strong>Account Security &amp; Support:</strong> Authenticating your
+            sessions, responding to support inquiries, and maintaining app
+            integrity.
+          </li>
+        </ul>
+        <p>
+          <strong
+            >We do NOT sell, rent, or trade your personal information or your
+            child's information to advertisers, data brokers, or third
+            parties.</strong
+          >
+        </p>
+
+        <h3>4. Third-Party Sharing &amp; Data Processors</h3>
+        <p>
+          To deliver Noctis AI, we work with trusted service providers who
+          process data strictly under our instructions and in compliance with
+          data privacy regulations:
+        </p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Third Party</th>
+              <th>Data Received</th>
+              <th>Purpose</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Supabase</strong></td>
+              <td>
+                User ID, email, profile details (child name, age, language),
+                story text, generated images &amp; audio, session tokens.
+              </td>
+              <td>
+                Primary database, authentication service, and cloud file
+                storage. Protected with Row Level Security (RLS).
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Google Gemini API</strong></td>
+              <td>
+                Child's name, child's age, story theme/moral/setting/language,
+                image generation prompts, story text for audio synthesis.
+              </td>
+              <td>
+                AI generation of story text, cover illustrations, and speech
+                narration.
+              </td>
+            </tr>
+            <tr>
+              <td><strong>RevenueCat</strong></td>
+              <td>
+                User ID, subscription status, purchase history, store receipt
+                tokens, device metadata (OS, model, locale, IP).
+              </td>
+              <td>
+                In-app purchase validation, subscription status sync, and
+                receipt processing.
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Apple</strong></td>
+              <td>
+                Apple ID credentials (during sign-in), payment receipt tokens.
+              </td>
+              <td>
+                Sign in with Apple authentication and App Store in-app billing.
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Google</strong></td>
+              <td>
+                Google OAuth credentials (during sign-in), payment receipt
+                tokens.
+              </td>
+              <td>
+                Sign in with Google authentication and Google Play Store in-app
+                billing.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="flag">
+          <strong
+            >[FLAG for Developer Review — Google Gemini API Terms]:</strong
+          >
+          Verify whether your Google Gemini API key is linked to a Google Cloud
+          paid/enterprise tier with zero-data-retention terms enabled. Under
+          Google Cloud Vertex AI / paid API terms, customer prompts are not used
+          to train Google's models. Please confirm this in your production
+          deployment.
+        </div>
+
+        <h3>5. Children's Privacy (COPPA &amp; GDPR-K Compliance)</h3>
+        <p>
+          The safety of children is our highest priority. Noctis AI complies
+          with the Children's Online Privacy Protection Act (COPPA) in the
+          United States and the General Data Protection Regulation (GDPR /
+          GDPR-K) in the European Union and United Kingdom.
+        </p>
+        <ul>
+          <li>
+            <strong>No Child Direct Accounts:</strong> Children are not
+            permitted to register accounts. Only parents or legal guardians may
+            create accounts.
+          </li>
+          <li>
+            <strong>Minimal Data Collection:</strong> We only collect the
+            child's first name, age (1–12), and preferred language to
+            personalize the bedtime stories. We do not collect child email
+            addresses, physical addresses, biometric identifiers, or school
+            information.
+          </li>
+          <li>
+            <strong>Parental Rights:</strong> Parents have the right at any time
+            to:
+            <ol style="margin-top: 6px">
+              <li>
+                Review the stories and profile information saved in the app;
+              </li>
+              <li>
+                Edit or update their child's name, age, or language in the app
+                Settings;
+              </li>
+              <li>Delete individual stories; or</li>
+              <li>
+                Permanently erase all child information and the entire user
+                account via the in-app delete button.
+              </li>
+            </ol>
+          </li>
+        </ul>
+        <p>
+          If you believe we have inadvertently collected information directly
+          from a child without verified parental consent, please contact us
+          immediately at
+          <a href="mailto:privacy@noctis.ai">privacy@noctis.ai</a>, and we will
+          promptly delete such records.
+        </p>
+
+        <h3>6. Data Retention &amp; Account Deletion</h3>
+        <p>
+          <strong>Retention Period:</strong> We retain your profile data,
+          stories, illustration images, and audio files for as long as your
+          account remains active, so you can enjoy your library.
+        </p>
+        <p>
+          <strong>Instant Self-Serve Account Deletion:</strong> You can delete
+          your account and all associated data at any time directly inside the
           app:
         </p>
+        <ol>
+          <li>Open the Noctis AI app.</li>
+          <li>Navigate to the <strong>Settings</strong> tab.</li>
+          <li>
+            Tap <strong>"Delete Account"</strong> and confirm your choice.
+          </li>
+        </ol>
+        <p>
+          <strong>What Happens When You Delete Your Account:</strong>
+          Our system triggers an automated database cascade (via a secure
+          Supabase Edge Function) that immediately and permanently deletes:
+        </p>
+        <ul>
+          <li>Your user authentication record and email address;</li>
+          <li>Your profile and child details;</li>
+          <li>All saved stories and their text;</li>
+          <li>
+            All story cover images in the <code>story-images</code> cloud
+            storage bucket;
+          </li>
+          <li>
+            All story audio files in the <code>story-audio</code> cloud storage
+            bucket;
+          </li>
+          <li>All generation logs and subscription database records.</li>
+        </ul>
+        <p>
+          <em>Important:</em> Account deletion is permanent and cannot be
+          undone. Account deletion does <strong>not</strong> automatically
+          cancel an active App Store or Google Play subscription; you must
+          cancel active subscriptions through your device store settings as
+          explained in <a href="#cancellation">Section 4 of our Terms</a>.
+        </p>
+
+        <h3>7. Data Security</h3>
+        <p>
+          We employ robust technical safeguards to protect your family's data:
+        </p>
         <ul>
           <li>
-            <strong>Supabase:</strong> Database and authentication services
+            All communications between the mobile app, backend servers, and AI
+            APIs are encrypted using industry-standard TLS/HTTPS protocols.
           </li>
           <li>
-            <strong>Apple:</strong> Authentication services (when you sign in
-            with Apple). Apple provides your email and name (on first
-            authorization only) according to their privacy policy.
+            All database tables enforce Supabase
+            <strong>Row Level Security (RLS)</strong>, meaning users can
+            strictly and only read or write their own data.
           </li>
           <li>
-            <strong>Google Gemini API:</strong> When you generate stories, your
-            prompts and story content are sent to Google's Gemini API to
-            generate story text, cover illustrations, and audio narration
-            (text-to-speech). Your inputs are subject to Google's own privacy
-            policy and API data-use terms.
+            Media files in cloud storage are organized under user-specific paths
+            and protected against unauthorized public access.
+          </li>
+        </ul>
+
+        <h3>8. Your Legal Rights</h3>
+        <p>
+          Depending on your location (such as the EU, UK, California, or other
+          US states), you may hold statutory rights including:
+        </p>
+        <ul>
+          <li>
+            <strong>Right to Access:</strong> Request a copy of the personal
+            data we hold about you.
           </li>
           <li>
-            <strong>RevenueCat:</strong> Subscription and purchase management
-            services, to process and validate your in-app purchases.
+            <strong>Right to Rectification:</strong> Correct inaccurate or
+            incomplete details.
           </li>
           <li>
-            <strong>Apple App Store:</strong> For in-app purchase processing
-            (subscriptions)
+            <strong>Right to Erasure ("Right to be Forgotten"):</strong>
+            Permanently erase your data at any time via in-app deletion or by
+            emailing us.
+          </li>
+          <li>
+            <strong>Right to Restrict or Object to Processing:</strong> Withdraw
+            consent or restrict how we process your information.
           </li>
         </ul>
         <p>
-          <strong>Note:</strong> Google Play Store integration is planned for
-          future Android builds but not currently implemented.
-        </p>
-        <p>
-          We do not sell your personal information to third parties for their
-          marketing purposes.
-        </p>
-
-        <h3>Data Retention</h3>
-        <p>
-          We retain your information for as long as necessary to provide our
-          services and fulfill the purposes outlined in this privacy policy.
-        </p>
-        <p>
-          <strong>Account Data:</strong> Retained until you delete your account.
-        </p>
-        <p>
-          <strong>Story Data:</strong> Retained until you delete the story or
-          your account. Stories are not automatically deleted after a period of
-          inactivity.
-        </p>
-        <p>
-          <strong>Audio Caching:</strong> Generated audio files are cached
-          temporarily on-device and deleted immediately after playback or on app
-          unmount. These temporary files are not stored in our database or
-          linked to your account in any persistent manner.
-        </p>
-        <p>
-          <strong>Account Deletion:</strong> When you delete your account, your
-          personal information and account data are deleted immediately, except
-          where required by law.
-        </p>
-
-        <h3>Data Security</h3>
-        <p>
-          We implement appropriate technical and organizational measures to
-          protect your personal information against unauthorized access,
-          alteration, disclosure, or destruction.
-        </p>
-        <p>
-          All data is transmitted using secure encryption protocols (HTTPS/TLS)
-          and stored in secure cloud infrastructure.
-        </p>
-
-        <h3>Children's Privacy</h3>
-        <p>
-          <strong>Parental Consent Required:</strong> Noctis Tales is designed
-          for children, and we collect personal information about children (such
-          as name, age, gender, and appearance) for story personalization. By
-          providing this information, you confirm that you are the parent or
-          legal guardian and provide explicit consent for such collection and
-          use.
-        </p>
-        <p>
-          <strong>Information Collected from Children:</strong> We collect child
-          name, age, gender, appearance, and additional details to generate
-          personalized stories. This information is sent to Google's Gemini API
-          for story generation and stored in our secure database.
-        </p>
-        <p>
-          <strong>Data Retention:</strong> Child-related data is retained in
-          stories until the story is deleted or the account is deleted.
-          Parents/guardians can delete individual stories or the entire account
-          at any time.
-        </p>
-        <p>
-          <strong>Third-Party Processing:</strong> Child data is shared with
-          Google's Gemini API for AI story generation. Google processes this
-          data according to their own privacy policy and data-use terms.
-        </p>
-        <p>
-          <strong>Parental Rights:</strong> Parents/guardians have the right to
-          access, correct, or delete their child's information at any time. To
-          request deletion or if you believe your child's information was
-          collected without proper consent, please contact us at
+          To exercise any of these rights, contact us at
           <a href="mailto:privacy@noctis.ai">privacy@noctis.ai</a>.
         </p>
+
+        <h3>9. Changes to This Privacy Policy</h3>
         <p>
-          <strong>Content Disclaimer:</strong> The app uses AI to generate story
-          content, which may occasionally produce content that varies in
-          appropriateness. Parents/guardians should exercise discretion and
-          review generated content before sharing with children.
+          We may update this Privacy Policy from time to time to reflect
+          improvements to the app or legal changes. When changes occur, we will
+          update the "Effective Date" at the top and provide an in-app notice if
+          material changes are made.
         </p>
 
-        <h3>Your Rights</h3>
+        <h3>10. Contact Us</h3>
         <p>
-          Depending on your location, you may have the following rights
-          regarding your personal information:
-        </p>
-        <ul>
-          <li>
-            <strong>Access:</strong> Request access to your personal information
-          </li>
-          <li>
-            <strong>Correction:</strong> Request correction of inaccurate
-            information
-          </li>
-          <li>
-            <strong>Deletion:</strong> Request deletion of your personal
-            information
-          </li>
-          <li>
-            <strong>Withdrawal of Consent:</strong> Withdraw consent where you
-            have previously provided it
-          </li>
-        </ul>
-
-        <h3>Account &amp; Data Deletion</h3>
-        <p>
-          You can delete your account and all associated data at any time by
-          visiting the Profile screen and selecting "Delete Account."
+          If you have questions, concerns, or requests regarding this Privacy
+          Policy, please reach out to:
         </p>
         <p>
-          Please note that account deletion is permanent and cannot be undone.
-          All your stories, account information, and personal data will be
-          permanently deleted immediately.
-        </p>
-        <p>
-          Active subscriptions must be managed separately through the App Store.
-        </p>
-
-        <h3>Tracking and Analytics</h3>
-        <p>
-          <strong>Our App:</strong> We do not use tracking technologies,
-          analytics SDKs, or collect behavioral data for analytics or
-          advertising purposes. We only track story generation quota to enforce
-          plan limits.
-        </p>
-        <p>
-          <strong>Third-Party Services:</strong> When you use Sign in with
-          Apple, Apple handles authentication according to their own privacy
-          policy and security practices. We do not control these technologies.
-        </p>
-        <p>
-          <strong>Gemini API:</strong> When stories are generated, the Gemini
-          API processes your inputs subject to Google's own data practices and
-          privacy policies.
-        </p>
-
-        <h3>Changes to This Privacy Policy</h3>
-        <p>
-          We may update this privacy policy from time to time. We will notify
-          you of any material changes by posting the new privacy policy in the
-          app and updating the effective date.
-        </p>
-
-        <h3>Contact Us</h3>
-        <p>
-          If you have any questions about this privacy policy or our data
-          practices, please contact us at:
-        </p>
-        <p>
-          <strong>Developer:</strong> Noctis AI<br />
-          <strong>Privacy:</strong>
-          <a href="mailto:privacy@noctis.ai">privacy@noctis.ai</a>
+          <strong>Noctis AI Privacy Team</strong><br />
+          Email: <a href="mailto:privacy@noctis.ai">privacy@noctis.ai</a><br />
+          <span class="flag-inline"
+            >[FLAG: Insert Company Postal Address, City, Country]</span
+          >
         </p>
       </section>
 
@@ -406,131 +658,298 @@
       <section id="terms">
         <h2>Terms of Service</h2>
 
-        <p class="meta"><strong>App name:</strong> Noctis Tales</p>
-        <p class="meta"><strong>Developer:</strong> Noctis AI</p>
-        <p class="meta"><strong>Effective date:</strong> October 19, 2026</p>
+        <p class="meta"><strong>Effective Date:</strong> November 8, 2026</p>
+        <p class="meta">
+          <strong>Contact:</strong>
+          <a href="mailto:support@noctis.ai">support@noctis.ai</a>
+        </p>
 
         <p>
-          By downloading, accessing, or using Noctis Tales, you agree to be
-          bound by these Terms of Service. If you do not agree, please do not
-          use the app.
+          Please read these Terms of Service ("Terms") carefully before using
+          the Noctis AI mobile application ("App") operated by
+          <span class="flag-inline"
+            >[FLAG: Legal Entity Name, e.g., Noctis AI Inc.]</span
+          >
+          ("Noctis AI," "we," "us," or "our").
         </p>
+        <p>
+          By creating an account, downloading, or using Noctis AI, you agree to
+          be bound by these Terms and our Privacy Policy. If you do not agree to
+          all terms, do not use the app.
+        </p>
+
+        <h3>1. Eligibility &amp; Account Registration</h3>
+        <ul>
+          <li>
+            <strong>Age Requirement:</strong> You must be at least 18 years of
+            age (or the age of legal majority) to create an account. Noctis AI
+            is intended for use by adults for the benefit of children under
+            their care.
+          </li>
+          <li>
+            <strong>Account Integrity:</strong> You agree to provide accurate
+            information and keep your login credentials secure. You are
+            responsible for all activity conducted through your account.
+          </li>
+        </ul>
+
+        <h3>2. AI-Generated Content &amp; Parental Responsibility</h3>
+        <p>
+          Noctis AI utilizes state-of-the-art artificial intelligence models
+          (Google Gemini API) to generate personalized stories, illustrations,
+          and read-aloud narrations based on your chosen inputs.
+        </p>
+        <ul>
+          <li>
+            <strong>Nature of AI:</strong> While we have implemented strict
+            safety system prompts and filtering to produce heartwarming,
+            child-appropriate stories, AI outputs can occasionally vary in tone,
+            style, or details.
+          </li>
+          <li>
+            <strong>Parental Supervision:</strong> Parents and guardians are
+            strongly encouraged to review generated stories and narrations with
+            or before reading them to their children.
+          </li>
+          <li>
+            <strong>Acceptable Use:</strong> You agree not to submit story
+            prompts, themes, or text that contain hate speech, sexually explicit
+            content, violence, harassment, illegal acts, or that infringe on the
+            intellectual property rights of any third party.
+          </li>
+        </ul>
+
+        <h3>3. Intellectual Property Rights</h3>
+        <ul>
+          <li>
+            <strong>Our Platform:</strong> The Noctis AI app, its design, user
+            interface, brand name, code, algorithms, and logos are the
+            proprietary property of Noctis AI and its licensors.
+          </li>
+          <li>
+            <strong>Your Stories:</strong> As between you and Noctis AI, you own
+            the personalized stories, illustrations, and audio files generated
+            for your personal family use. You grant Noctis AI a non-exclusive,
+            royalty-free, worldwide license to host, store, display, and process
+            your content solely to provide the services to you.
+          </li>
+          <li>
+            <strong>Public Sharing &amp; Attribution:</strong> If you publicly
+            share, publish, or distribute stories or illustrations generated by
+            the app outside of your private household, you agree to provide
+            reasonable credit or attribution (e.g.,
+            <em>"Created with Noctis AI"</em>).
+          </li>
+        </ul>
+
+        <!-- ============ SUBSCRIPTION & CANCELLATION ============ -->
+        <h3 id="cancellation">4. Subscriptions, Payments &amp; Cancellation</h3>
+
+        <h4>A. Plans &amp; Quotas</h4>
+        <p>
+          Noctis AI offers a free access tier and optional paid auto-renewing
+          subscriptions (e.g., "Ultra Plan").
+          <span class="flag-inline"
+            >[FLAG: Confirm exact plan names, pricing, and quota limits, e.g.,
+            Free Tier: 1 story per day; Ultra: unlimited stories, HD
+            illustrations, and full TTS audio].</span
+          >
+        </p>
+
+        <h4>B. In-App Purchases &amp; Billing</h4>
+        <ul>
+          <li>
+            All subscription purchases are processed directly through the
+            <strong>Apple App Store</strong> (for iOS) or
+            <strong>Google Play Store</strong> (for Android) using your existing
+            store payment method.
+          </li>
+          <li>
+            Prices are displayed in your local currency inside the app before
+            purchase and include applicable sales tax or VAT where required by
+            law.
+          </li>
+        </ul>
+
+        <h4>C. Automatic Renewal</h4>
         <p>
           <strong
-            >By creating an account, you explicitly accept these Terms of
-            Service and the Privacy Policy.</strong
+            >Your subscription will automatically renew at the end of each
+            billing cycle (e.g., monthly or annually) unless you cancel it at
+            least 24 hours before the end of the current billing period.</strong
           >
-          Account creation constitutes your legally binding agreement to all
-          terms, conditions, and policies described herein.
+          Your App Store or Google Play account will be charged for renewal
+          within 24 hours prior to the conclusion of the current period at the
+          then-current subscription price.
         </p>
 
-        <h3>Use of the App</h3>
+        <h4>D. Step-by-Step Cancellation Guide</h4>
         <p>
-          <strong>Adult Account Holders Only:</strong> You must be at least 18
-          years old to create an account with Noctis Tales. By creating an
-          account, you represent and verify that you are an adult (18 years or
-          older). This requirement ensures proper consent for any child data
-          collection.
-        </p>
-        <p>
-          You agree to use the app only for lawful purposes and in a way that
-          does not infringe the rights of others or restrict anyone else's use
-          of the app.
+          Because your subscription is managed by Apple or Google,
+          <strong
+            >Noctis AI cannot cancel your subscription on your behalf</strong
+          >. You can cancel anytime using the steps below:
         </p>
 
-        <h3>AI-Generated Content</h3>
+        <div class="card">
+          <h4 style="margin-top: 0">
+            How to Cancel on iPhone / iPad (Apple App Store):
+          </h4>
+          <ol>
+            <li>
+              Open the <strong>Settings</strong> app on your iPhone or iPad.
+            </li>
+            <li>
+              Tap your <strong>Name / Apple ID</strong> at the top of the
+              screen.
+            </li>
+            <li>Tap <strong>Subscriptions</strong>.</li>
+            <li>
+              Find and select <strong>Noctis AI</strong> (or Noctis Tales).
+            </li>
+            <li>Tap <strong>Cancel Subscription</strong> and confirm.</li>
+          </ol>
+          <p style="margin-bottom: 0; font-size: 0.9rem">
+            <em
+              >If canceled, your subscription remains active until the end of
+              your current paid billing period.</em
+            >
+          </p>
+        </div>
+
+        <div class="card">
+          <h4 style="margin-top: 0">
+            How to Cancel on Android (Google Play Store):
+          </h4>
+          <ol>
+            <li>
+              Open the <strong>Google Play Store</strong> app on your Android
+              device.
+            </li>
+            <li>
+              Tap your <strong>Profile Icon</strong> in the top-right corner.
+            </li>
+            <li>
+              Tap <strong>Payments &amp; subscriptions</strong> &gt;
+              <strong>Subscriptions</strong>.
+            </li>
+            <li>
+              Select <strong>Noctis AI</strong> from your list of active
+              subscriptions.
+            </li>
+            <li>
+              Tap <strong>Cancel subscription</strong> and follow the on-screen
+              instructions.
+            </li>
+          </ol>
+          <p style="margin-bottom: 0; font-size: 0.9rem">
+            <em
+              >You can continue using your paid benefits until the current
+              billing cycle expires.</em
+            >
+          </p>
+        </div>
+
+        <div class="flag">
+          <strong
+            >Important Reminder on Account Deletion vs. Subscription
+            Cancellation:</strong
+          >
+          Deleting your Noctis AI account or removing the app from your phone
+          <strong>does not</strong> cancel your paid subscription. You must
+          cancel the subscription through Apple or Google Play as described
+          above.
+        </div>
+
+        <h4>E. Refunds</h4>
         <p>
-          Story text, cover images, and audio narration are generated using AI
-          (Google's Gemini API) based on your prompts. AI-generated content may
-          occasionally be inaccurate, unpredictable, or contain material some
-          users find inappropriate.
+          All refund requests are subject to the policies of the respective
+          store:
         </p>
+        <ul>
+          <li>
+            <strong>Apple App Store:</strong> Request refunds directly at
+            <a
+              href="https://reportaproblem.apple.com"
+              target="_blank"
+              rel="noopener"
+              >reportaproblem.apple.com</a
+            >.
+          </li>
+          <li>
+            <strong>Google Play Store:</strong> Request refunds through your
+            Google Play account or at
+            <a
+              href="https://play.google.com/store/account/orderhistory"
+              target="_blank"
+              rel="noopener"
+              >Google Play Order History</a
+            >.
+          </li>
+        </ul>
+
+        <h3>5. Termination</h3>
         <p>
-          We do not guarantee the accuracy, appropriateness, or quality of any
-          AI-generated content, and you use such content at your own discretion.
-        </p>
-        <p>
-          You are responsible for the prompts you submit and agree not to use
-          the app to generate content that is illegal, harmful, abusive, or
-          infringes on the rights of others.
+          You may terminate these Terms at any time by deleting your account
+          from the in-app Settings tab. We reserve the right to suspend or
+          terminate your account if you violate these Terms, misuse the service,
+          or engage in abusive or unlawful behavior.
         </p>
 
-        <h3>Subscriptions &amp; Payments</h3>
+        <h3>6. Disclaimer of Warranties</h3>
         <p>
-          Certain features of Noctis Tales require a paid subscription.
-          Subscriptions are billed through the App Store and are subject to
-          Apple's terms and payment systems.
-        </p>
-        <p>
-          Subscriptions automatically renew unless canceled at least 24 hours
-          before the end of the current billing period. You can manage or cancel
-          your subscription in your App Store account settings.
-        </p>
-        <p>
-          Refunds are handled according to Apple's refund policy; we do not
-          directly process refunds.
+          The Noctis AI app and all AI-generated stories, images, and audio are
+          provided on an <strong>"AS IS"</strong> and
+          <strong>"AS AVAILABLE"</strong> basis without warranties of any kind,
+          either express or implied, including warranties of merchantability,
+          fitness for a particular purpose, or uninterrupted availability.
         </p>
 
-        <h3>Account &amp; Termination</h3>
+        <h3>7. Limitation of Liability</h3>
         <p>
-          You are responsible for maintaining the security of your account
-          credentials.
-        </p>
-        <p>
-          We reserve the right to suspend or terminate accounts that violate
-          these Terms, engage in abusive behavior, or misuse the app.
-        </p>
-        <p>
-          You may delete your account at any time from the Profile screen.
-          Account deletion is permanent and does not automatically cancel any
-          active subscription — that must be managed separately through the App
-          Store.
+          To the maximum extent permitted by applicable law, Noctis AI, its
+          directors, employees, and agents shall not be liable for any indirect,
+          incidental, special, consequential, or punitive damages arising out of
+          or related to your use of or inability to use the app or generated
+          content. Our total liability for any claim shall not exceed the amount
+          you paid to Noctis AI during the twelve (12) months preceding the
+          incident.
         </p>
 
-        <h3>Intellectual Property</h3>
+        <h3>8. Governing Law &amp; Dispute Resolution</h3>
         <p>
-          The app, its design, brand, and underlying technology are owned by
-          Noctis AI. You retain rights to the prompts you submit and ownership
-          of your generated stories, cover images, and audio narration. You
-          grant Noctis AI a non-exclusive, worldwide, royalty-free license to
-          host, store, and process this content solely to provide, maintain, and
-          deliver the service to you.
-        </p>
-        <p>
-          <strong>Attribution Requirement:</strong> If you share, publish,
-          reproduce, or publicly distribute any generated stories, cover images,
-          or audio outside of the app, you agree to provide clear and visible
-          attribution crediting Noctis AI (e.g., &ldquo;Created with Noctis
-          Tales&rdquo; or &ldquo;Powered by Noctis AI&rdquo;).
+          These Terms are governed by and construed in accordance with the laws
+          of
+          <span class="flag-inline"
+            >[FLAG: Insert Governing Jurisdiction, e.g., State of Delaware,
+            United States / State of California / England &amp; Wales]</span
+          >, without regard to its conflict of law principles.
         </p>
 
-        <h3>Disclaimers &amp; Limitation of Liability</h3>
+        <h3>9. Changes to Terms</h3>
         <p>
-          The app is provided "as is" without warranties of any kind. We do not
-          guarantee uninterrupted or error-free service.
-        </p>
-        <p>
-          To the fullest extent permitted by law, Noctis AI is not liable for
-          any indirect, incidental, or consequential damages arising from your
-          use of the app or its AI-generated content.
+          We reserve the right to modify these Terms at any time. When changes
+          occur, we will update the Effective Date above. Continued use of the
+          app after revisions become effective constitutes acceptance of the
+          amended Terms.
         </p>
 
-        <h3>Changes to These Terms</h3>
-        <p>
-          We may update these Terms from time to time. Continued use of the app
-          after changes take effect constitutes acceptance of the revised Terms.
-        </p>
-
-        <h3>Contact Us</h3>
+        <h3>10. Contact Us</h3>
         <p>If you have questions about these Terms, please contact us at:</p>
         <p>
-          <strong>Developer:</strong> Noctis AI<br />
-          <strong>Privacy:</strong>
-          <a href="mailto:privacy@noctis.ai">privacy@noctis.ai</a>
+          <strong>Noctis AI Support</strong><br />
+          Email: <a href="mailto:support@noctis.ai">support@noctis.ai</a><br />
+          Website:
+          <a href="https://ktsarvi.github.io/noctis-privacy-and-terms/"
+            >https://ktsarvi.github.io/noctis-privacy-and-terms/</a
+          >
         </p>
       </section>
 
-      <footer>Last updated: October 19, 2026</footer>
+      <footer>
+        <p>&copy; 2026 Noctis AI. All rights reserved.</p>
+        <p>Last updated: November 8, 2026</p>
+      </footer>
     </div>
   </body>
 </html>
